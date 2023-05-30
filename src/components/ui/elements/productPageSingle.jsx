@@ -2,6 +2,7 @@ import Price from "./priceContainer";
 import { StyledProductContainer } from "../../styles/productPage.styles";
 import { useCartStore } from "./cart";
 import { shallow } from "zustand/shallow"
+import Reviews from "./reviewsContainer";
 
 export default function ProductPageSingle({ product }) {
     const { title, imageUrl, price, discountedPrice, description, tags = [], reviews = [] } = product;
@@ -16,7 +17,6 @@ export default function ProductPageSingle({ product }) {
     const handleAdd = () => {
         addProduct(product);
     }
-
     return (
             <StyledProductContainer>
                     <section>
@@ -42,14 +42,7 @@ export default function ProductPageSingle({ product }) {
                         </aside>
                     </section>
                     <section>
-                        <h2>Reviews</h2>
-                        {reviews.map((review) => (
-                            <div key={review.id}>
-                                <h3>{review.username}</h3>
-                                <p>Rating: {review.rating}</p>
-                                <p>{review.description}</p>
-                            </div>
-                        ))}
+                    <Reviews reviews={reviews}/>
                     </section>
             </StyledProductContainer>
     )

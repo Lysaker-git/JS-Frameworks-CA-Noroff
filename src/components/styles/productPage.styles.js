@@ -7,6 +7,7 @@ export const StyledProductContainer = styled.div`
         height: fit-content;
         text-align: end;
         color: white;
+        box-shadow: 4px 4px 10px rgba(10,10,5,.5);
 
         > * {
             flex: 1 1 500px;
@@ -33,6 +34,7 @@ export const StyledProductContainer = styled.div`
             display: flex;
             flex-direction: column;
             height: 30rem;
+            
             > div:first-of-type {
                 height: fit-content;
                 display: flex;
@@ -81,7 +83,7 @@ export const StyledProductContainer = styled.div`
                 margin-top: auto;
                 margin-bottom: 1rem;
             }
-            > div:last-of-type {
+            > div:nth-child(4) {
                 display: flex;
                 gap: 1rem;
                 place-content: end;
@@ -91,17 +93,32 @@ export const StyledProductContainer = styled.div`
                     background-color: rgba(10,10,5,0.4);
                 }
             }
+            > div:last-of-type {
+                button {
+                    margin-top: 1rem;
+                    padding: .5rem 1rem;
+                    background-color: rgba(234, 144, 16, 0.5);
+                    border: none;
+                    font-size: 1.5rem;
+                    box-shadow: 4px 4px 10px rgba(10,10,5,.5);
+                    cursor: pointer;
+                    
+                }
+            }
         }
     }
     section:last-of-type {
         margin-top: 5rem;
         color: white;
-        max-width: 30ch;
+        max-width: 700px;
 
         div {
             padding: 2rem;
             background-color: rgba(10,10,5,0.2);
             margin-bottom: 1rem;
+            p {
+                margin-top: .5rem;
+            }
         }
     }
 `

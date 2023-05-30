@@ -27,6 +27,9 @@ export const GlobalStyles = createGlobalStyle`
 
 
     }
+    ul {
+        list-style: none;
+    }
     body {
         background: linear-gradient(193deg, rgba(10,5,5,1), rgba(10,5,0,.8));
         backdrop-filter: blur(10px);
@@ -105,10 +108,11 @@ export const GlobalStyles = createGlobalStyle`
                 &:not(:first-of-type),
                 &:first-of-type > div {
                     grid-template-columns: repeat(1, 1fr);
+                }
             }
         }
     }
     ul {
         list-style: none;
     }
-`
+}`

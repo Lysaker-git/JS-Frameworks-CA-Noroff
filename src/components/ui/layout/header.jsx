@@ -8,7 +8,12 @@ import { useCartStore } from '../elements/cart';
 export default function HeaderComponent() {
 
     const { products } = useCartStore();
-    const numberOfProducts = products.length;
+    
+    const numberOfProducts = products.reduce(
+        (total, product) => total + product.quantity,0
+    )
+
+
     return (
         <Header >
             <nav>
@@ -27,9 +32,7 @@ export default function HeaderComponent() {
                     <img src={search} alt="Search" />
                 </label>
             </Form>
-            <Link to="/cart">
-                <p>Cart: <span>{numberOfProducts}</span></p>
-            </Link>
+            {numberOfProducts > 0 && <Link to="/cart"><p>Cart: <span>{numberOfProducts}</span></p></Link>}
         </Header>
     );
 }
