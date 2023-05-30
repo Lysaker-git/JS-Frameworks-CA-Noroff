@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
 export const Footer = styled.footer`
-    background: blue;
+    height: 10rem;
+    display: grid;
+    place-content: center;
+    color: white;
 `;

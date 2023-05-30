@@ -1,27 +1,23 @@
 import { Link } from 'react-router-dom';
 import { Header } from '../../styles/header.styles';
 import search from '../../assets/search.svg';
+import icon from '../../assets/on-hop-website-favicon-color.png'
 import { Form } from '../../styles/form.styles'
-// import { useState } from 'react';
+import { useCartStore } from '../elements/cart';
 
 export default function HeaderComponent() {
-    // const [color, setColor] = useState(false);
 
-    // const changeColor = () => {
-    //     if(window.scrollY >= 100) {
-    //         setColor(true)
-    //     } else {
-    //         setColor(false)
-    //     }
-    // }
-    // window.addEventListener('scroll', changeColor)
-
+    const { products } = useCartStore();
+    const numberOfProducts = products.length;
     return (
         <Header >
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">On Hop</Link>
+                        <Link to="/">
+                            <img src ={icon}/>
+                            <span>n Hop</span>
+                        </Link>
                     </li>
                 </ul>
             </nav>
@@ -31,6 +27,9 @@ export default function HeaderComponent() {
                     <img src={search} alt="Search" />
                 </label>
             </Form>
+            <Link to="/cart">
+                <p>Cart: <span>{numberOfProducts}</span></p>
+            </Link>
         </Header>
     );
 }

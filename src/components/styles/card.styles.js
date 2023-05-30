@@ -41,6 +41,17 @@ export const Card = styled.div`
             opacity: 1;
         }
     }
+    @media (max-width: 670px) {
+        h3 {
+            opacity: 1;
+            background: rgba(234, 144, 16,0.3);
+            height: fit-content;
+            bottom: 0;
+            width: fit-content;
+            padding: .5rem 1rem;
+            backdrop-filter: blur(3px);
+        }
+    }
 
     > div:last-of-type {
         height: fit-content;

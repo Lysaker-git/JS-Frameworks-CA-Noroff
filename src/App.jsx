@@ -1,5 +1,6 @@
 import { Outlet, Route, Routes } from "react-router";
 import HomePage from "./components/ui";
+import Cart from "./components/ui/cart";
 import FooterComponent from "./components/ui/layout/footer";
 import HeaderComponent from "./components/ui/layout/header";
 import { GlobalStyles } from "./components/styles/global.styles";
@@ -46,7 +47,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
-            <Route path="products" element={<h1>products</h1>} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/:id" element={<ProductPage />} />
             <Route path="*" element={<h1>Not Found</h1>} />
           </Route>

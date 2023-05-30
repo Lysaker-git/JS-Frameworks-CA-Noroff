@@ -93,29 +93,22 @@ export const GlobalStyles = createGlobalStyle`
                 gap: 1rem 2rem;
             }
             &:first-of-type > div {
-                height: 30rem;
+                height: fit-content;
+                margin-bottom: 10rem;
+            }
+            @media (max-width: 1070px) {
+                &:not(:first-of-type),
+                &:first-of-type > div {
+                    grid-template-columns: repeat(2, 1fr);
+            }
+            @media (max-width: 670px) {
+                &:not(:first-of-type),
+                &:first-of-type > div {
+                    grid-template-columns: repeat(1, 1fr);
             }
         }
     }
     ul {
         list-style: none;
-    }
-    header {
-        a  {
-            position: relative;
-            text-decoration: none;
-            color: #eef1efff;
-            font-size: 20px;
-            font-weight: bold;
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: 0; 
-                height: 3px;
-                width: 1.8rem;
-                background-color: white;
-                opacity: .7;
-            }
-        }
     }
 `

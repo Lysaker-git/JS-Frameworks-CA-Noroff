@@ -1,17 +1,21 @@
 import Price from "./priceContainer";
 import { StyledProductContainer } from "../../styles/productPage.styles";
+import { useCartStore } from "./cart";
+import { shallow } from "zustand/shallow"
 
 export default function ProductPageSingle({ product }) {
     const { title, imageUrl, price, discountedPrice, description, tags = [], reviews = [] } = product;
-    
-    console.log(title)
-    console.log(imageUrl)
-    console.log(price)
-    console.log(discountedPrice)
-    console.log(description)
-    console.log(tags)
-    console.log(reviews)
 
+    const { addProduct } = useCartStore(
+        (state) => ({
+            addProduct: state.addProduct
+        }),
+        shallow,
+    );
+
+    const handleAdd = () => {
+        addProduct(product);
+    }
 
     return (
             <StyledProductContainer>
@@ -31,6 +35,9 @@ export default function ProductPageSingle({ product }) {
                                 {tags.map((tag) => (
                                     <p key={tag}>{tag}</p>
                                 ))}    
+                            </div>
+                            <div>
+                                <button onClick={handleAdd}>Add to cart</button>
                             </div>
                         </aside>
                     </section>

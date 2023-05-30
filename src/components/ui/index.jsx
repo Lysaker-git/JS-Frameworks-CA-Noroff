@@ -40,7 +40,6 @@ function Products() {
         })
         .sort((a, b) => b.percentageOfPrice - a.percentageOfPrice)
         .slice(0,3);
-        // console.log(highlight)
         return (
             <div>
                 {highlight.map((product) => (

@@ -100,9 +100,8 @@ export const StyledProductContainer = styled.div`
 
         div {
             padding: 2rem;
-            border-top: 2px solid red;
-            border-bottom: 2px solid red;
-            
+            background-color: rgba(10,10,5,0.2);
+            margin-bottom: 1rem;
         }
     }
 `
