@@ -4,12 +4,12 @@ export const Form = styled.form`
     position: relative;
 
     input {
-        background-color: rgba(234, 144, 16, 0.02);
+        background-color: ${(props) => props.theme.color.accentOpacityLow};
         border: none;
         height: 28px;
         color: #eef1eF;
         padding: .5rem;
-        box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+        box-shadow: ${(props) => props.theme.color.boxShadow};
     }
     label {
         position: absolute;

@@ -1,10 +1,8 @@
-import { Card } from '../../styles/card.styles';
-import { StyledLink } from '../../styles/global.styles';
-import Price from './priceContainer';
+import { Card } from '../ui/styles/card.styles';
+import { StyledLink } from '../ui/styles/global.styles';
+import Price from './PriceContainer';
 
-
-
-export default function singleProduct(product) {
+const SingleProduct = ({ product }) => {
     const { title, imageUrl, id, price, discountedPrice } = product;
     
     return (
@@ -21,3 +19,5 @@ export default function singleProduct(product) {
         </StyledLink>
     )
 }
+
+export default SingleProduct;

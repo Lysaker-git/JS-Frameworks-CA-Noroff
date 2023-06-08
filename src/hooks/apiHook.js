@@ -10,7 +10,6 @@ export default function useApi(url) {
           try {
             setIsError(false);
             setIsLoading(true);
-            console.log('i run')
             const response = await fetch(url);
             const json = await response.json();
             setProducts(json);

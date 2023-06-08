@@ -7,7 +7,7 @@ export const StyledProductContainer = styled.div`
         height: fit-content;
         text-align: end;
         color: white;
-        box-shadow: 4px 4px 10px rgba(10,10,5,.5);
+        box-shadow: ${(props) => props.theme.color.boxShadow};
 
         > * {
             flex: 1 1 500px;
@@ -29,7 +29,7 @@ export const StyledProductContainer = styled.div`
             }
         }
         aside {
-            background-color: rgba(10,10,5,0.4);
+            background-color: ${(props) => props.theme.color.darkOpacity};
             padding: 1rem;
             display: flex;
             flex-direction: column;
@@ -55,14 +55,14 @@ export const StyledProductContainer = styled.div`
                 }
     
                 div:last-of-type {
-                    background-color: rgba(10,10,5,0.4);
+                    background-color: ${(props) => props.theme.color.darkOpacity};
                     padding: .2rem 1rem;
                     display: grid;
                     place-content: center;
     
                     p:not(:last-child) {
                         position: relative;
-                        color: rgb(169, 180, 194);
+                        color: ${(props) => props.theme.color.light};
                     }
     
                     p:not(:last-child)::after {
@@ -71,7 +71,7 @@ export const StyledProductContainer = styled.div`
                         bottom: 50%;
                         left: 0;
                         right: 0;
-                        border-bottom: 3px solid rgba(234, 144, 16,1);
+                        border-bottom: 3px solid ${(props) => props.theme.color.accent};
                         transform: translateY(50%);
                         transform: rotate(-9deg)
                     }
@@ -90,31 +90,30 @@ export const StyledProductContainer = styled.div`
                 p {
                     margin-top: 1rem;
                     padding: 1rem 2rem; 
-                    background-color: rgba(10,10,5,0.4);
+                    background-color: ${(props) => props.theme.color.darkOpacity};
                 }
             }
             > div:last-of-type {
                 button {
                     margin-top: 1rem;
                     padding: .5rem 1rem;
-                    background-color: rgba(234, 144, 16, 0.5);
+                    background-color: ${(props) => props.theme.color.accentOpacity};
                     border: none;
                     font-size: 1.5rem;
-                    box-shadow: 4px 4px 10px rgba(10,10,5,.5);
+                    box-shadow: ${(props) => props.theme.color.boxShadow};
                     cursor: pointer;
-                    
                 }
             }
         }
     }
     section:last-of-type {
         margin-top: 5rem;
-        color: white;
+        color: ${(props) => props.theme.color.white};
         max-width: 700px;
 
         div {
             padding: 2rem;
-            background-color: rgba(10,10,5,0.2);
+            background-color: ${(props) => props.theme.color.darkOpacity};
             margin-bottom: 1rem;
             p {
                 margin-top: .5rem;

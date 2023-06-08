@@ -7,8 +7,8 @@ export const Card = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
-    background-color: rgba(10,10,5,0.4);
+    box-shadow: ${(props) => props.theme.color.boxShadow};
+    background-color: ${(props) => props.theme.color.darkOpacity};
     div:first-of-type {
         position: relative;
         height: 70%;
@@ -24,14 +24,14 @@ export const Card = styled.div`
     h3 {
         position: absolute;
         z-index: 1;
-        color: rgb(10, 5, 5);
+        color: ${(props) => props.theme.color.dark};
         font-weight: bold;
         height: 100%;
         width: 100%;
         display: grid;
         place-content: center;
         font-size: 2rem;
-        background: rgba(234, 144, 16,0.5);
+        background: ${(props) => props.theme.color.accentOpacity};
         background-blend-mode: multiply;
         backdrop-filter: blur(5px);
         text-align: center;
@@ -44,7 +44,7 @@ export const Card = styled.div`
     @media (max-width: 670px) {
         h3 {
             opacity: 1;
-            background: rgba(234, 144, 16,0.3);
+            background: ${(props) => props.theme.color.accentOpacity};
             height: fit-content;
             bottom: 0;
             width: fit-content;
@@ -69,18 +69,18 @@ export const Card = styled.div`
             display: grid; 
             height: 100%;
             place-content: center;
-            color: rgb(234, 144, 16);
+            color: ${(props) => props.theme.color.accent};
         }
 
         div:last-of-type {
-            background-color: rgba(10,10,5,0.4);
+            background-color: ${(props) => props.theme.color.darkOpacity};
             padding: .2rem 1rem;
             display: grid;
             place-content: center;
 
             p:not(:last-child) {
                 position: relative;
-                color: rgb(169, 180, 194);
+                color: ${(props) => props.theme.color.light};
             }
 
             p:not(:last-child)::after {
@@ -89,7 +89,7 @@ export const Card = styled.div`
                 bottom: 50%;
                 left: 0;
                 right: 0;
-                border-bottom: 3px solid rgba(234, 144, 16,1);
+                border-bottom: 3px solid ${(props) => props.theme.color.accent};
                 transform: translateY(50%);
                 transform: rotate(-9deg)
             }

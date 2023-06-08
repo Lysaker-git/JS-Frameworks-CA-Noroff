@@ -3,12 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-
-export const size = {
-    mobile: '768px',
-    laptop: '1440px'
-}
-
 export const StyledLink = styled(Link)`
     text-decoration: none;
     color: white;
@@ -53,7 +47,6 @@ export const GlobalStyles = createGlobalStyle`
             width: 100%;
             top: 0;
             height: 26rem;
-            /* background: radial-gradient(circle, rgba(0,0,0,.2) 0%, rgba(10,5,5,0) 100%); */
             box-shadow: -1px -23px 13px -24px rgba(0,0,0,0.5), -1px -23px 3px -24px rgba(255,255,255,0.2);
         }
         > section:first-of-type {
@@ -62,22 +55,22 @@ export const GlobalStyles = createGlobalStyle`
             place-content: center;
             margin-bottom: 2rem;
             h1 {
-                color: rgb(238, 241, 239);
+                color: ${(props) => props.theme.color.white};
                 font-size: clamp(1rem, .5rem + 2vw, 5rem);
             }
             p {
-                color: rgb(238, 241, 239);
+                color: ${(props) => props.theme.color.white};
                 justify-self: center;
                 span {
                     text-decoration: underline;
                 }
             }
             span {
-                color: rgba(234, 144, 16,0.5);
+                color: ${(props) => props.theme.color.accentOpacity};
             }
         }
         h2 {
-            color: rgb(238, 241, 239);
+            color: ${(props) => props.theme.color.white};
             margin-bottom: 1rem;
 
         }
@@ -99,12 +92,12 @@ export const GlobalStyles = createGlobalStyle`
                 height: fit-content;
                 margin-bottom: 10rem;
             }
-            @media (max-width: 1070px) {
+            @media (max-width: ${(props) => props.theme.size.medium}) {
                 &:not(:first-of-type),
                 &:first-of-type > div {
                     grid-template-columns: repeat(2, 1fr);
             }
-            @media (max-width: 670px) {
+            @media (max-width: ${(props) => props.theme.size.mobile}) {
                 &:not(:first-of-type),
                 &:first-of-type > div {
                     grid-template-columns: repeat(1, 1fr);

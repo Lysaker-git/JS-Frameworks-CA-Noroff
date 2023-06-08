@@ -1,6 +1,6 @@
-import Price from "./priceContainer";
-import { StyledProductContainer } from "../../styles/productPage.styles";
-import { useCartStore } from "./cart";
+import Price from "./PriceContainer";
+import { StyledProductContainer } from "../ui/productPage/productPage.styles";
+import { useCartStore } from "../../hooks/cartHook";
 import { shallow } from "zustand/shallow"
 import Reviews from "./reviewsContainer";
 

@@ -10,7 +10,7 @@ export const Header = styled.header`
         a  {
             position: relative;
             text-decoration: none;
-            color: #eef1efff;
+            color: ${(props) => props.theme.color.white};
             font-weight: bold;
             font-size: 1.4rem;
             span {
@@ -32,8 +32,8 @@ export const Header = styled.header`
         right: 0;
         padding: .2rem 1rem;
         top: .9rem;
-        background-color: rgba(234, 144, 16, 0.3);
-        color: rgb(238, 241, 239);
+        background-color: ${(props) => props.theme.color.accentOpacity};
+        color: ${(props) => props.theme.color.white};
         text-decoration: none;
         font-weight: bold;
     }
