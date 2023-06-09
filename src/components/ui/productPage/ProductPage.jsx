@@ -1,6 +1,6 @@
 import useApi from "../../../hooks/apiHook";
 import { useParams } from "react-router";
-import ProductPageSingle from "../../elements/productPageSingle";
+import ProductPageSingle from "../../elements/ProductPageSingle";
 
 export default function ProductPage () {
     let { id } = useParams();
