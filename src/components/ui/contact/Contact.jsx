@@ -24,7 +24,7 @@ export default function ContactPage () {
                     <label htmlFor="email">E-mail</label>
                     <input type="email" name="email" id="email" required/>
                     <label htmlFor="body">Write your message here:</label>
-                    <textarea name="body" id="body" ></textarea>
+                    <textarea name="body" id="body" required minLength={3}></textarea>
                 </div>
                 <button type="submit">Submit Form</button>
             </form>
