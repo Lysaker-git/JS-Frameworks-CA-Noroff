@@ -2,7 +2,7 @@ import Price from "./PriceContainer";
 import { StyledProductContainer } from "../ui/productPage/productPage.styles";
 import { useCartStore } from "../../hooks/cartHook";
 import { shallow } from "zustand/shallow"
-import Reviews from "./reviewsContainer";
+import Reviews from "./ReviewsContainer";
 
 export default function ProductPageSingle({ product }) {
     const { title, imageUrl, price, discountedPrice, description, tags = [], reviews = [] } = product;
