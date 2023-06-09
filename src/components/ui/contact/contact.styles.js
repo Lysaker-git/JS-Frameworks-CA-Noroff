@@ -54,5 +54,13 @@ export const ContactContainer = styled.section`
         box-shadow: ${(props) => props.theme.color.boxShadow};
         border-radius: ${(props) => props.theme.myStyles.borderRadius};
         font-size: 1.5rem;
+
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        transform: translateY(0);
+
+        &:active {
+            transform: translateY(5px);
+        }
     }
 `

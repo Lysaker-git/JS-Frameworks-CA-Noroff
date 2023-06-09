@@ -4,10 +4,11 @@ export const SuccessContainer = styled.section`
     border: 2px solid ${(props) => props.theme.color.dark};
     background-color: ${(props) => props.theme.color.darkOpacity};
     border-radius: ${(props) => props.theme.myStyles.borderRadius};
-    height: 60vh;
+    height: fit-content;
     display: grid;
     place-content: center;
     color: ${(props) => props.theme.color.white};
+    padding: 4rem 0; 
 
     img {
         margin: 0 auto;

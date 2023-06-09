@@ -41,7 +41,7 @@ export default function Cart() {
                     <StyledLink to={product.id}>
                         <h3>{product.title}</h3>
                     </StyledLink>
-                    {product.price === product.discountedPrice && <p>Unit price: {product.price.toFixed(2)}</p>}
+                    {product.price === product.discountedPrice && <p>Price: {product.price.toFixed(2)}</p>}
                     {product.price > product.discountedPrice && <div><p>{product.price.toFixed(2)}</p><p>Price: {product.discountedPrice.toFixed(2)}</p></div>}
                     {product.quantity && <p>Quantity: {product.quantity}</p>}
                 </div>

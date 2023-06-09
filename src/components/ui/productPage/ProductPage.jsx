@@ -13,7 +13,6 @@ export default function ProductPage () {
     if (isError) {
         return console.log('Error');
     }
-    console.log(products)
     return (
         <main>
                 <ProductPageSingle product={products} />

@@ -102,6 +102,12 @@ export const StyledProductContainer = styled.div`
                     font-size: 1.5rem;
                     box-shadow: ${(props) => props.theme.color.boxShadow};
                     cursor: pointer;
+                    transform: translateY(0);
+                    transition: all .2s ease-in-out;
+
+                    &:active {
+                        transform: translateY(5px);
+                    }
                 }
             }
         }

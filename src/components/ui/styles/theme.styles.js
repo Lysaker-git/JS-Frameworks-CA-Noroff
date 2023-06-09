@@ -16,6 +16,6 @@ export const theme = {
         laptop: '1440px'
     },
     myStyles: {
-        borderRadius: '10px'
+        borderRadius: '5px'
     }
   };

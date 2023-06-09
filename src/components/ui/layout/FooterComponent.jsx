@@ -6,7 +6,7 @@ export default function FooterComponent() {
 
     return (
         <Footer>
-            <p>Copywright 2023 - Robin Lysaker &copy;</p>
+            <p>Copyright 2023 - Robin Lysaker &copy;</p>
             <Link to='/contact'>Contact Us</Link>
         </Footer>
     );
