@@ -8,10 +8,10 @@ export default function Products() {
     const {products, isLoading, isError} = useApi('https://api.noroff.dev/api/v1/online-shop');
 
     if (isLoading) {
-    //   return console.log('Loading');
+      return console.log('Loading');
     }
     if (isError) {
-    //   return console.log('Error');
+      return console.log('Error');
     }
     const filteredProducts = products.filter((product) => {
         const title = product.title.toLowerCase();
