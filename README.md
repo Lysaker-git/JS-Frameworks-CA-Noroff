@@ -1,5 +1,7 @@
 # On hop
 
+![image of site](https://raw.githubusercontent.com/Lysaker-git/JS-Frameworks-CA-Noroff/main/src/assets/Screenshot%202023-10-14%20213905.png)
+
 A simple overview of the use/purpose of the project.
 
 ## Simple rundown:
